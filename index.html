@@ -1,10 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>My HTML file</title>
-  </head>
-  <body>
-    <p>This is my page 😎 oh yeah</p>
-  </body>
+<head>
+		<!--Declaracion de los recursos usados y titulo de pagina-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Navigation Tabs A01273675</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div>
+		<h1>Navigation Tabs Design Pattern</h1>
+		<p>http://ui-patterns.com/patterns/NavigationTabs</p>
+	</div>
+
+	<style>
+		.tabClass {
+			display: none;
+		}
+		.tabClass___visible {
+			display: inherit;
+		}
+	</style>
+
+		<!--Botones para los tabs, se debe cambiar los estilos a esto para que se vea bonito-->
+		<div>
+			<button type="button" id="button1">Tab1</button>
+			<button type="button" id="button2">Tab2</button>
+			<button type="button" id="button3">Tab3</button>
+		</div>
+
+			<!--Tabs divididos entre cada uno para que cada que se presione un boton aparezca el texto acorde-->
+
+	<section id="Tab1" class="tabClass">
+		<div>
+			<h1>Tab1</h1>
+			<p>Este es el Tab 1</p>
+		</div>
+	</section>
+
+	<section id="Tab2" class="tabClass">
+		<div>
+			<h1>Tab2</h1>
+			<p>Este es el Tab 2</p>
+		</div>
+	</section>
+
+	<section id="Tab3" class="tabClass">
+		<div>
+			<h1>Tab3</h1>
+			<p>Este es el Tab 3</p>
+		</div>
+	</section>
+
+		<!--Codigo que hace que funcionen los botones/Supongo hay una solucion mas elegante para esto en especifico-->
+
+	<script type="text/javascript">
+
+		const button1 = document.querySelector('#button1');
+		const button2 = document.querySelector('#button2');
+		const button3 = document.querySelector('#button3');
+
+		button1.addEventListener('click', function(){
+			let section1 = document.querySelector('#Tab1');
+			section1.classList.toggle('tabClass___visible');
+		})
+
+		button2.addEventListener('click', function(){
+			let section1 = document.querySelector('#Tab2');
+			section1.classList.toggle('tabClass___visible');
+		})
+
+		button3.addEventListener('click', function(){
+			let section1 = document.querySelector('#Tab3');
+			section1.classList.toggle('tabClass___visible');
+		})
+	</script>
+</body>
 </html>
